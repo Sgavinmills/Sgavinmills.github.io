@@ -1,0 +1,337 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+
+body {
+    background: #1d1d1d;
+    background-image: url(paws.png), url(paws.png);
+    background-repeat: repeat-y, repeat-y;
+    background-position: left top, right top;
+   
+    
+}
+
+.contentwrapper {  /*The white central background*/
+    margin-top: 10px;
+    max-width: 940px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+    overflow: hidden;
+}
+
+
+
+
+.bannerimage {
+    display: block; /*margins dont work unless its a block*/
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    
+}
+
+
+
+
+nav {
+    float:left;
+    width:100%;  /*The nav box is floated so width shrinks to size of contents.Resetit to 100% */
+    box-shadow: 0px 5px 8px #888888;
+}
+
+.navbar { /*The ul element*/
+    margin-top: 2px;
+    margin-bottom: 2px;
+    list-style-type: none; /*Removes bullet points if browser shows them*/
+    float: left; /*This guys width will be width of its contents now*/
+    position: relative;
+    left: 50%; /*This shifts the ul box 50%to the right */
+    
+    
+}
+
+
+.navbar li {
+    float: left;
+    position: relative;
+    right: 50%; /*The li items are in the ul box that has been shifted 50% to the right.We now shift them 50% back. */
+
+}
+
+.navbar li a { /*styling of each link in the nav bar */
+    color: black;
+    display: block;
+    padding: 12px 5px;
+    font-weight: bold;
+}
+
+
+
+.navbar li a:hover {
+    
+    text-decoration: none;
+    background: red;
+    border-radius: 12px;
+    opacity: 0.7;
+    padding: 8px 5px;
+}
+
+
+.navdropdown:hover a { 
+   opacity 0.7;
+}
+
+
+.dropdowncontent {
+   position: absolute; /*Asolutely positioned relative to the li element it is a child of. (The li element is positioned with float: left */
+   display: none;
+   opacity 0.7;
+   background: white;
+   min-width: 160px;
+   
+}
+
+.navbar .dropdowncontent a:hover {
+   opacity 0.5;
+    min-width: 160px;
+    
+    
+ }
+
+
+ .navdropdown:hover .dropdowncontent { /*makes the dropdowncontent appear when hovering on .navdropdown */
+    display: inline-block;
+    
+}
+
+
+.leftcolumn {
+    float: left;
+    width: 75%
+}
+
+.rightcolumn {
+    float: left;
+    width: 25%
+}
+
+
+
+.leftcolumn div {  /*padding for all the divs in the left column */
+    padding: 15px 15px;   
+}
+
+.rightcolumn div {  /*padding for all the divs in the left column */
+    padding: 10px 10px; 
+    margin-right: 5px;  
+}
+
+
+
+#AARstatstable {
+    width: 100%;
+    
+    
+}
+
+#AARstatstable td, #AARstatstable th {
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+#AARstatstable tr:nth-child(even) { /*Shades alternative rows of the table */
+    background-color: #f2f2f2;
+}
+
+#AARstatstable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: red;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    
+    
+}
+
+#AARstatstable td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+}
+
+#AARstatstable td, #AARstatstable th {
+    border-radius: 10px;
+}
+
+
+h4 {
+    font: normal 150% "Comic Sans MS", Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: red;
+}
+
+.leftcolumnpictures {
+    float: left;
+    width: 33.3%;
+}
+
+.rightcolumnpictures {
+    float: left;
+    width: 33.3%;
+    margin: 0;
+}
+
+.middlecolumnpictures {
+    float: left;
+    width: 33.3%;
+    
+}
+
+div .headerbox { /*Had to get extra specific to override the earlier .leftcolumn div rule */
+    
+    margin-bottom: 5px;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+    height: 25px;
+    box-shadow: 0px 5px 8px #888888;
+    font-family: 'Rubik', sans-serif;
+    
+}
+
+
+
+
+.leftcolumnpictures img, .middlecolumnpictures img, .rightcolumnpictures img {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    border: 1px solid red;
+    
+} 
+
+  .sociallinks {
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    
+  }
+
+  .sociallinks img {
+      width: 20%
+  }
+
+  .info {
+      margin-bottom: 10px;
+  }
+
+
+h6 {
+    text-align: center;
+    font: normal 150% "Comic Sans MS", Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: black;
+    background: gold;
+    border-radius: 25px;
+    width: 90px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sponsorinfo {
+    font-size: 12px;
+  
+}
+
+h5 {
+    font: normal 100% "Comic Sans MS", Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: red;
+}
+
+.info img {
+    width: 100%
+}
+
+
+.leftcolumnbottom {
+    width: 33.3%;
+    float: left;
+    
+}
+
+.rightcolumnbottom {
+    width: 33.3%;
+    float: left;
+}
+
+.middlecolumnbottom {
+    width: 33.3%;
+    float: left;
+    margin-bottom: 30px;
+}
+
+.bottombox {
+    background: red;
+    margin: 15px;
+    border-radius: 10px;
+    height: 160px;
+    text-align:center;
+    color: white;
+    position: relative;
+    box-shadow: 0px 5px 8px #888888;
+    padding: 3px;
+}
+h2 {
+    padding: 10px;
+}
+
+
+.bottombox a {
+    background: white;
+    color: black;
+    padding: 8px;
+    position: absolute;
+    bottom: 10px;
+    right: 30%;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    box-shadow: 0px 5px 8px #888888;
+}
+
+.bottombox a:hover {
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+
+footer{
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+    
