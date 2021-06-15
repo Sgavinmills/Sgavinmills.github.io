@@ -1,0 +1,277 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Montserrat&display=swap');
+
+
+
+/*Standard CSS opening. Can use this on most stylesheets */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  
+
+    
+/*Left this here incase I want to try implementing a background image again */
+/*.wrapper {
+    /*background: url(images/background.jpg) no-repeat; 
+    background-size: cover;
+    height: 100vh; //100% of viewport height
+
+    background-color: #152856;
+
+
+} */
+
+p {
+    padding: 10px;
+}
+
+body {
+    background: rgb(21,40,86);
+    font-family: 'Montserrat', sans-serif;
+    margin-left: auto;
+    margin-right: auto;  
+    text-align: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    min-height: 100vh;
+    height: auto;
+    
+}
+
+.wrapper {
+    min-height: 100vh;
+    position: relative;
+    
+}
+
+
+
+.main {
+    color: rgba(255, 255, 255, 0.719);
+    margin-top: 20px;
+    padding-top: 25px;
+    padding-bottom: 120px;
+    
+    
+}
+
+.projects {  /*Just a box. Will need to amend when actually have some projects to put in */
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgba(255, 255, 255, 0.719);
+    margin-top: 50px;
+    padding-top: 25px;
+    padding-bottom: 100px;
+    border: 2px solid rgba(255,255,255,0.8)
+}
+
+
+.nameheader {
+    float: left;
+    height: auto;
+    padding: 10px 20px;
+    color: white;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 50px;
+    text-shadow: 2px 2px rgb(200,200,200);
+    transition: 1s;
+    
+}
+
+
+
+.nameheader:hover {
+    color: red;
+    
+}
+
+nav ul li a:hover { 
+    background: red;
+    color: black;
+}
+
+nav ul li a:active{ 
+    background: red;
+    color: black;
+}
+
+
+nav {
+    height: 100px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    /*background: rgba(0,0,0, 0.4); */
+    background: rgb(2,11,34);
+     
+}
+
+
+nav ul {
+    float: right;
+    margin-right: 100px;
+    
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0px 8px;
+    line-height: 100px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 6px 13px;
+    border-radius: 10px;
+    transition: 0.8s;
+}
+
+.githublink {
+    color: white;
+    font-size: 20px;
+    padding: 6px 13px;
+    border-radius: 10px;
+    transition: 0.8s;
+
+}
+
+section {
+    margin-top: 30px;
+}
+
+.githublink:hover {
+    background: red;
+    color: black;
+}
+
+
+
+label {
+    display: inline-block;
+    padding: 12px 12px 12px 0;
+    
+    
+}
+
+input {
+    border: 2px solid white;
+    border-radius: 5px;
+   
+      
+}
+input[type="submit"] {
+    margin-top: 40px;
+    margin-right: 11.25%;  
+    padding: 16px 32px;
+    float: right;
+}
+
+input[type="text"], textarea {
+    
+    padding: 12px 20px;
+    width: 70%;
+    margin-top: 10px;
+    
+}
+
+textarea {
+    
+    height: 200px;
+}
+
+
+
+input[type="text"]:focus {
+    background-color: rgba(255,255,255,0.9);
+    
+}
+
+
+
+.formwrapper {
+    background-color: rgba(2,11,34, 0.25);
+    border-radius: 10px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+
+
+.col1 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col2 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+   
+    
+}
+
+/* Clear floats after the columns. Allows changing of heights in prev rows and ensures new row starts below */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+/* Example of how ::after works:
+  Insert some text after the content of each <p> element:
+p::after {
+  content: " - Remember this";
+} */
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col1, .col2, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+
+
+
+#myprofile {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+   
+    
+}
+
+footer {
+    color: rgba(255,255,255,0.719);
+    
+    padding-top: 15px;
+    
+    position: absolute;
+    bottom: 0;
+    width: 99%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+    height: 75px;
+    
+    
+    background: rgba(2,11,34, 0.8);
+}
+
+
+
+
+
