@@ -1,0 +1,63 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #01323D;
+}
+
+.contentwrapper {
+    background-color: #03586C;
+    margin-top: 10px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    height: 1000px; /*remove this later, just so i can see stuff*/
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+header {
+    margin: 10px;
+    margin: auto;
+    text-align: center;
+    border-bottom:2px groove #AF8200
+    
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    color: #AF8200;
+    display: inline-block;
+    padding: 0.3em;
+    border: 2px dotted #AF8200;
+    text-shadow: 5px 5px 8px #01323D;
+    font-size: 3vw;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: 2px groove #AF8200
+    
+}
+
+nav a {
+    color: #AF8200;
+    padding: 14px 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2vw;   
+    margin: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #01323D;
+    opacity: 0.8;
+}
