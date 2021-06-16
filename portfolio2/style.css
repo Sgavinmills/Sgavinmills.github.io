@@ -7,6 +7,7 @@ body {
     background-color: #01323D;
 }
 
+
 .contentwrapper {
     background-color: #03586C;
     margin-top: 10px;
@@ -15,14 +16,12 @@ body {
     margin-right: auto;
     overflow: hidden;
     border-radius: 20px;
-    height: 1000px; /*remove this later, just so i can see stuff*/
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 header {
-    margin: 10px;
-    margin: auto;
+    
     text-align: center;
     border-bottom:2px groove #AF8200
     
@@ -35,7 +34,7 @@ h1 {
     padding: 0.3em;
     border: 2px dotted #AF8200;
     text-shadow: 5px 5px 8px #01323D;
-    font-size: 53px;
+    font-size: 53px;  /*Different font size for responsive settings */
 }
 
 nav {
@@ -62,6 +61,49 @@ nav a:hover {
     opacity: 0.8;
 }
 
+.imagecontainer {
+    position: relative;
+    max-width: 701px; /*Exact dimensions of both pictures*/
+    max-height: 526px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mainpicture {
+    display: block; 
+    max-width: 100%;  /*It will shrink for smaller screens but not go over its normal size on larger screens */
+    height: auto;
+    border-radius: 12px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+
+
+.overlaypicture {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: 2s;
+    border-radius: 12px;
+}
+
+.imagecontainer:hover .overlaypicture {
+    opacity: 1;
+}
+
+footer, p {
+    color: #AF8200;
+    text-align: center;
+    padding: 20px;
+}
+
+
+
 
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
@@ -73,7 +115,13 @@ nav a:hover {
     }
     nav a {
         padding: 0;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 5vh;
     }
   }
 
-  /*test comment */
+  
+
