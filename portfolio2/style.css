@@ -35,7 +35,7 @@ h1 {
     padding: 0.3em;
     border: 2px dotted #AF8200;
     text-shadow: 5px 5px 8px #01323D;
-    font-size: 3vw;
+    font-size: 53px;
 }
 
 nav {
@@ -51,7 +51,7 @@ nav a {
     color: #AF8200;
     padding: 14px 20px;
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.2vw;   
+    font-size: 22px;   
     margin: 10px;
     border-radius: 10px;
     text-decoration: none;
@@ -69,5 +69,9 @@ nav a:hover {
     nav {   
       flex-direction: column;
       text-align: center;
+      
+    }
+    nav a {
+        padding: 0;
     }
   }
