@@ -7,6 +7,24 @@ body {
     background-color: #01323D;
 }
 
+p, footer{ 
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    padding: 20px;
+    color: #AF8200;
+}
+
+p {
+    
+    font-weight:bold;
+    font-size: 1.2em;
+}
+
+footer { 
+    
+    font-size: 0.9em;
+}
+
 
 .contentwrapper {
     background-color: #03586C;
@@ -96,11 +114,7 @@ nav a:hover {
     opacity: 1;
 }
 
-footer, p {
-    color: #AF8200;
-    text-align: center;
-    padding: 20px;
-}
+
 
 
 
