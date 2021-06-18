@@ -114,8 +114,82 @@ nav a:hover {
     opacity: 1;
 }
 
+/*Modal code*/
 
+.modal { /*The div box that contains the span (X button), image and caption blocks  */
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /*Enables scroll if needed*/
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 
+}
+
+/* Modal content (image) */
+.modal-content {  /*This is an image element but with no src... the javascript chooses the images (I think) */
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 701px;
+
+}
+
+/*Caption of modal contnet*/
+
+#caption { /*THis is a div with no content set in html, javascript provides the content. */
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 701px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+
+}
+
+/*Add animation */
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s
+}
+
+@keyframes zoom {
+    from { transform: scale(0.10 )}
+    to { transform: scale(1)}
+}
+
+/*The close button */
+.close { /*This is a <span> element */
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+
+}
+
+.close:hover, 
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
 
 
 
