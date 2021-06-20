@@ -192,12 +192,34 @@ nav a:hover {
 
 .formwrapper {
     background-color: rgba(1,50,61,0.5);
-    
+    position: relative;
     border-radius: 10px;
     width: 70%;
     margin-left: auto;
     margin-right: auto;
     padding: 25px;
+}
+
+.formnotinuse { 
+    opacity: 0;
+    position:absolute;
+    top: 20px;
+    left:0;
+    right:0;
+    bottom:0;
+    transform: rotate(-20deg);
+}
+
+.formnotinuse h1 {
+    color: red;
+    text-decoration: underline;
+
+}
+
+.formwrapper:hover .formnotinuse{
+
+    opacity:1;
+
 }
 
 .col1 {
