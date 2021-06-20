@@ -1,216 +1,237 @@
 
-
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Montserrat&display=swap');
-
-
-
-/*Standard CSS opening. Can use this on most stylesheets */
 * {
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
-  }
-
-  
-
-    
-/*Left this here incase I want to try implementing a background image again */
-/*.wrapper {
-    /*background: url(images/background.jpg) no-repeat; 
-    background-size: cover;
-    height: 100vh; //100% of viewport height
-
-    background-color: #152856;
-
-
-} */
-
-p {
-    padding: 10px;
 }
 
 body {
-    background: rgb(21,40,86);
+    background-color: #01323D;
+}
+
+p, footer { 
     font-family: 'Montserrat', sans-serif;
-    margin-left: auto;
-    margin-right: auto;  
     text-align: center;
-    padding-left: 16px;
-    padding-right: 16px;
-    min-height: 100vh;
-    height: auto;
+    padding: 20px;
+    color: #AF8200;
+}
+
+p,  {
+    
+    font-weight:bold;
+    font-size: 1.2em;
+}
+
+footer { 
+    
+    font-size: 0.9em;
+}
+
+
+
+
+
+
+.contentwrapper {
+    background-color: #03586C;
+    margin-top: 10px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+}
+
+header {
+    
+    text-align: center;
+    border-bottom:2px groove #AF8200
     
 }
 
-.wrapper {
-    min-height: 100vh;
-    position: relative;
-    
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    color: #AF8200;
+    display: inline-block;
+    padding: 0.3em;
+    border: 2px dotted #AF8200;
+    text-shadow: 5px 5px 8px #01323D;
+    font-size: 53px;  /*Different font size for responsive settings */
 }
-
-
-
-.main {
-    color: rgba(255, 255, 255, 0.719);
-    margin-top: 20px;
-    padding-top: 25px;
-    padding-bottom: 120px;
-    
-    
-}
-
-
-
-
-.nameheader {
-    float: left;
-    height: auto;
-    padding: 10px 20px;
-    color: white;
-    font-family: 'Architects Daughter', cursive;
-    font-size: 50px;
-    text-shadow: 2px 2px rgb(200,200,200);
-    transition: 1s;
-    
-}
-
-
-
-.nameheader:hover {
-    color: red;
-    
-}
-
-nav ul li a:hover { 
-    background: red;
-    color: black;
-}
-
-nav ul li a:active{ 
-    background: red;
-    color: black;
-}
-
 
 nav {
-    height: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: 2px groove #AF8200
     
+}
+
+nav a {
+    color: #AF8200;
+    padding: 14px 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;   
+    margin: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #01323D;
+    opacity: 0.8;
+}
+
+.imagecontainer {
+    position: relative;
+    max-width: 701px; /*Exact dimensions of both pictures*/
+    max-height: 526px;
     margin-left: auto;
     margin-right: auto;
-    /*background: rgba(0,0,0, 0.4); */
-    background: rgb(2,11,34);
-     
+}
+.mainpicture {
+    display: block; 
+    max-width: 100%;  /*It will shrink for smaller screens but not go over its normal size on larger screens */
+    height: auto;
+    border-radius: 12px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 
-nav ul {
-    float: right;
-    margin-right: 100px;
-    
+
+.overlaypicture {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: 0.4s;
+    border-radius: 12px;
 }
 
-nav ul li {
-    display: inline-block;
-    margin: 0px 8px;
-    line-height: 100px;
+.imagecontainer:hover .overlaypicture {
+    opacity: 1;
 }
 
-nav ul li a {
+/*Modal code*/
+
+.modal { /*The div box that contains the span (X button), image and caption blocks  */
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /*Enables scroll if needed*/
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+
+}
+
+/* Modal content (image) */
+.modal-content {  /*This is an image element but with no src... the javascript chooses the images */
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 701px;
+
+}
+
+/*Caption of modal contnet*/
+
+#caption { /*THis is a div with no content set in html, javascript provides the content. */
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 701px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+
+}
+
+/*Add animation */
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s
+}
+
+@keyframes zoom {
+    from { transform: scale(0.10 )}
+    to { transform: scale(1)}
+}
+
+/*The close button */
+.close { /*This is a <span> element */
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+
+}
+
+.close:hover, 
+.close:focus {
+    color: #bbb;
     text-decoration: none;
-    color: white;
-    font-size: 20px;
-    padding: 6px 13px;
-    border-radius: 10px;
-    transition: 0.8s;
-}
-
-.githublink {
-    color: white;
-    font-size: 20px;
-    padding: 6px 13px;
-    border-radius: 10px;
-    transition: 0.8s;
-
-}
-
-section {
-    margin-top: 30px;
-}
-
-.githublink:hover {
-    background: red;
-    color: black;
+    cursor: pointer;
 }
 
 
-
-label {
-    display: inline-block;
-    padding: 12px 12px 12px 0;
-    
-    
-}
-
-input {
-    border: 2px solid white;
-    border-radius: 5px;
-   
-      
-}
-input[type="submit"] {
-    margin-top: 40px;
-    margin-right: 11.25%;  
-    padding: 16px 32px;
-    float: right;
-}
-
-input[type="text"], textarea {
-    
-    padding: 12px 20px;
-    width: 70%;
-    margin-top: 10px;
-    
-}
-
-textarea {
-    
-    height: 200px;
-}
-
-
-
-input[type="text"]:focus {
-    background-color: rgba(255,255,255,0.9);
-    
-}
-
-
+/*Contact page form */
 
 .formwrapper {
-    background-color: rgba(2,11,34, 0.25);
+    background-color: rgba(1,50,61,0.5);
+    position: relative;
     border-radius: 10px;
     width: 70%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
-    padding-bottom: 20px;
-    padding-top: 10px;
+    padding: 25px;
 }
 
+.formnotinuse { 
+    opacity: 0;
+    position:absolute;
+    top: 20px;
+    left:0;
+    right:0;
+    bottom:0;
+    transform: rotate(-20deg);
+}
 
+.formnotinuse h1 {
+    color: red;
+    text-decoration: underline;
+
+}
+
+.formwrapper:hover .formnotinuse{
+
+    opacity:1;
+
+}
 
 .col1 {
     float: left;
     width: 25%;
-    margin-top: 6px;
 }
 
 .col2 {
     float: left;
-    width: 75%;
-    margin-top: 6px;
-   
-    
+    width: 75%
 }
 
 /* Clear floats after the columns. Allows changing of heights in prev rows and ensures new row starts below */
@@ -219,78 +240,105 @@ input[type="text"]:focus {
     display: table;
     clear: both;
   }
-/* Example of how ::after works:
-  Insert some text after the content of each <p> element:
-p::after {
-  content: " - Remember this";
-} */
 
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-    .col1, .col2, input[type=submit] {
-      width: 100%;
-      margin-top: 0;
-    }
-  }
+label {
+    display: inline-block;
+    padding: 10px;
+}
 
+input { 
+    border: 2px solid white;
+    border-radius: 5px;
+}
 
+input[type="submit"] {
+    float: right;
+}
 
-#myprofile {
-    display: block;
+input[type="text"], textarea {
+    width: 100%;
+}
+
+textarea {
+    height: 200px;
+}
+
+input, textarea {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+label {
+    color: #AF8200;
+    
+}
+
+.projectcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    
+    
+    align-items: center;
+    
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-   
-    
 }
 
-footer {
-    color: rgba(255,255,255,0.719);
+.projectbox {
+    display: flex;
+    flex-direction: column;
     
-    padding-top: 15px;
-    
-    position: absolute;
-    bottom: 0;
-    width: 99%;
-    margin-left: auto;
-    margin-right: auto;
-    
-    
-    height: 75px;
-    
-    
-    background: rgba(2,11,34, 0.8);
+    align-items: center;
+    width: 25%;
 }
 
-.projectsbox {
-   overflow: hidden;
-   
-   width: 60%;
-   margin-left: auto;
-   margin-right: auto;
-   color: rgba(255, 255, 255, 0.719);
-    margin-top: 50px;
-    padding-top: 25px;
-    padding-bottom: 100px;
-    border: 2px solid rgba(255,255,255,0.8);
-}
-
-.individualproject img {
+.projectbox img {
     width: 150px;
     height: 150px;
 }
 
-.individualproject {
-    float: left;
-    width: 25%;
+.projectbox a {
+   text-decoration: underline;
+   color: #AF8200;
+   font-weight: bold;
 }
 
-.individualproject a {
-    color: grey;
-}
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    nav {   
+      flex-direction: column;
+      text-align: center;
+      
+    }
+    nav a {
+        padding: 0;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 5vh;
+    }
+
+    .modal-content {
+        width: 100%;
+    }
+
+    .col1, .col2, input[type="submit"] {
+        width:100%;
+    }
+
+    .projectcontainer {
+        flex-direction: column;
+    }
+
+    .projectbox {
+        width: 100%;
+    }
 
 
+  }
 
-
-
+  
 
