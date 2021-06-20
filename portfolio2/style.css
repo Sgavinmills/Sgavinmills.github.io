@@ -109,7 +109,7 @@ nav a:hover {
     max-width: 100%;
     height: auto;
     opacity: 0;
-    transition: 2s;
+    transition: 0.4s;
     border-radius: 12px;
 }
 
@@ -135,7 +135,7 @@ nav a:hover {
 }
 
 /* Modal content (image) */
-.modal-content {  /*This is an image element but with no src... the javascript chooses the images (I think) */
+.modal-content {  /*This is an image element but with no src... the javascript chooses the images */
     margin: auto;
     display: block;
     width: 80%;
