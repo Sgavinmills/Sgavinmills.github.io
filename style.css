@@ -280,7 +280,7 @@ label {
     
     
     align-items: top;
-    
+    justify-content: space-around;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
@@ -289,14 +289,29 @@ label {
 .projectbox {
     display: flex;
     flex-direction: column;
-    
+    background-color: white;
     align-items: center;
-    width: 25%;
+    margin: 10px;
+    max-width: 250px;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    padding: 10px 10px 20px 10px;
+    border: 1px solid #BFBFBF;
+    border-radius: 2px;
+    align-self: center
+    
+}
+
+.transformright {
+    transform: rotate(7deg);
+}
+
+.transformleft {
+    transform: rotate(-7deg);
 }
 
 .projectbox img {
-    width: 150px;
-    height: 150px;
+    max-width: 150px;
+    max-height: 150px;
 }
 
 .projectbox a {
