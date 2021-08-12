@@ -596,8 +596,13 @@ body {
     color: #bbb;
 }
 
+.footerListLink:hover {
+    color: goldenrod;
+    font-size: 1.7rem;
+}
+
 .contact p {
-    font-size: 1.5rem;
+    font-size: rem;
     color: #bbb;
     margin-bottom: 4rem;
 }
@@ -839,5 +844,30 @@ check different viewports size. Scale down and check for problems, fix according
 
     .readMoreHeader {
         font-size: 2rem;
+    }
+
+    /*del if doesnt work */
+    .sideBar {
+        width: 4rem;
+    }
+
+    .header {
+        margin-left: 4rem;
+    }
+
+    .aboutMe {
+        margin-left: 4rem;
+    }
+
+    .projectsContainer {
+        margin-left: 4rem;
+    }
+
+    .footer {
+        margin-left: 4rem;
+    }
+
+    .checkbox:checked ~ .navigation{
+        left: 4rem;
     }
 }
