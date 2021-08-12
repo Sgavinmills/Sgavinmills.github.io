@@ -1,0 +1,843 @@
+html {
+  font-size: 62.5%; /*Makes default font-size 10px (rather than 16) */
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*end of common styles */
+
+/*navbar*/
+/*side bar */
+.sideBar {
+    width: 8rem;
+    height: 100%;
+    background-color: #eee;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+
+}
+
+.menu-icon {
+   margin-top: 3rem;
+   cursor: pointer;
+}
+
+.line {
+    height: 0.2rem; /* 2 pixels" */
+    width: 2.5rem;
+    background-color: #222;
+    margin-bottom: 0.6rem;
+}
+
+.line1, .line3 {
+    width: 1.8rem;
+    transition: all 0.4s;
+}
+
+.menu-icon:hover .line {
+    width: 2.5rem;
+}
+
+.socialIconsList {
+    list-style: none;
+    padding: 0;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.social-link {
+    font-size: 2rem;
+    color: #777;
+    transition: color 0.3s
+}
+
+.social-link:hover {
+    color: #deaa86;
+}
+
+.year {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #555;
+}
+/*end of sidebar*/
+
+/*end of navbar*/
+
+/*navigation*/
+.navigation {
+    position: fixed;
+    left: -32rem;
+    width: 40rem;
+    height: 100%;
+    background: linear-gradient(to top, rgba(34,32,41,1),  rgba(34,32,41,0.8)), url(img/nav-bg.jpeg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: left 0.8s cubic-bezier(1,0,0,1);
+    z-index: 9;
+}
+
+
+.menu-icon:hover .navigation {
+    display: flex;
+}
+.navigationHeading {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: #deaa86;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+
+.navigationSearch {
+    /*So can position the button relative to the form*/
+    position: relative;
+}
+
+.navigationSearchInput {
+    width: 30rem;
+    padding: 1rem 2rem;
+    background-color: rgba(0,0,0,0.3);
+    color: #deaa86;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    outline: none;
+    border: 0.1rem solid #555;
+    border-radius: 10rem;
+    transition: background-color 0.3s;
+    
+}
+
+.navigationSearchInput:focus {
+    background-color: rgba(0,0,0,0.1)
+    
+}
+
+.navigationSearchBtn {
+    border: none;
+    background-color: transparent;
+    color: #deaa86;
+    font-size: 1.7rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+
+}
+
+.navigationSearchBtn:focus {
+    outline: none;
+}
+
+.navigationList {
+    list-style: none;
+    padding: 0px;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.navigationItem {
+    position: relative;
+}
+.navigationLink {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.navigationLink::before {
+    content: "";
+    width: 0rem;
+    height: 0.1rem;
+    background-color: #deaa86;
+    position: absolute;
+    top: 1rem;
+    left: -4rem;
+    transition: width 0.5s
+}
+
+.navigationLink::after {
+    content: "";
+    width: 0rem;
+    height: 0.1rem;
+    background-color: #deaa86;
+    position: absolute;
+    top: 1rem;
+    right: -4rem;
+    transition: width 0.5s
+
+}
+
+.navigation-link:hover {
+    color: #deaa86;
+
+}
+
+.navigationLink:hover::before,
+.navigationLink:hover::after {
+    width: 3rem;
+}
+
+
+.copyright {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.checkbox {
+    display: none;
+}
+
+/* ~ combinatior is "general sibling combinator", selects elements from all of inputs siblings*/
+.checkbox:checked ~ .navigation{
+    left: 8rem;
+}
+
+/*adjacent sibling selector*/
+.checkbox:checked ~ .sideBar .line1 {
+    transform: rotate(-405deg) translate(-5px,6px);
+    width: 2.5rem;
+}
+
+.checkbox:checked ~ .sideBar .line2 {
+    opacity: 0;
+}
+
+.checkbox:checked ~ .sideBar .line3 {
+    transform: rotate(405deg) translate(-5px,-6px);
+    width: 2.5rem;
+}
+/*end of navigation*/
+
+/*Header*/
+.header {
+    margin-left: 8rem;
+    height: 50vh;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.5)), url(img/scenery.jpeg) center no-repeat;
+    background-size: cover;
+    animation: headerShrink 1s
+}
+
+@keyframes headerShrink {
+    0% {
+        height: 100vh
+    }
+    100% {
+        height: 50vh
+    }
+}
+
+.brand {
+    display: flex;
+    cursor: pointer;
+    margin-left: 2rem;
+}
+
+.portfolioHeading {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3.7rem;
+    font-weight: 400;
+    color: #deaa86;
+    letter-spacing: 0.2rem;
+}
+
+.banner {
+    color: #ddd;
+    height: 65rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.bannerHeading {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 7rem;
+    font-weight: 400;
+    margin-bottom: 0;
+    animation: anim 2s;
+}
+.bannerParagraph {
+    font-size: 3.5rem;
+    font-weight: 300;
+    animation: anim 1.5s 0.5s backwards;
+
+}
+
+.bannerButton {
+    width: 21rem;
+    padding: 1.2rem 2rem;
+    font-size: 2rem;
+    color: #333;
+    letter-spacing: 0.1rem;
+    border: none;
+    border-radius: 10rem;
+    outline: none;
+    background: linear-gradient(to right, gold, goldenrod);
+    cursor: pointer;
+    animation: anim 1s 1s backwards;
+
+}
+
+.bannerButton:hover {
+    background: linear-gradient(to left, gold, goldenrod);
+}
+
+.bannerButton:active {
+    transform: translateY(0.2rem)
+}
+
+@keyframes anim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/*End of header*/
+
+/* About me */
+
+
+.aboutMe {
+    margin-left: 8rem;
+    display: flex;
+    background-color: #ddd;
+}
+
+.aboutMeContent {
+    /*flex shrink is 1 to help with resizing later*/
+    /* flex: 0 1 50%; */
+    width: 75%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.aboutMeHeading {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 4rem;
+    font-weight: 300;
+    color: #555;
+}
+
+
+
+
+
+.subHeading {
+    font-size: 3.5rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    color: #b85d1c;
+}
+
+.aboutMeParagraph {
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 5rem;
+
+}
+
+
+
+
+
+
+/* .checkbox:checked ~ .navigation{
+    left: 8rem;
+}
+
+
+
+/*end of about me */
+
+
+/* projects */
+.projectsContainer {
+    margin-left: 8rem;
+}
+
+.projectsHeader {
+    
+    text-align: center;
+}
+
+
+.projectImagesContainer {
+    margin: 5rem 0 10rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.projectImageWrapper {
+    overflow: hidden;
+    box-shadow: 3rem 6rem 6rem rgba(0,0,0,0.3);
+    box-shadow: 10px 10px 5px #aaaaaa;
+    margin: 2rem;
+    max-width: 20rem;
+}
+
+.innerImageWrapper {
+    max-width: 19rem;
+    max-height: 19rem;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.transformRight {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(7deg);
+}
+
+.transformLeft {
+    transform: rotate(-7deg);
+}
+
+.projectBlurb {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+
+
+}
+
+.projectImage {
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+    box-shadow: 0 3rem 6rem rgba(0,0,0,0.3)
+}
+
+.projectImage:hover {
+    transform: scale(1.3);
+    opacity: 0.8;
+}
+
+
+.readMoreBtn {
+    width: 15rem;
+    padding: 0.7rem 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #b85d1c;
+    background-color: transparent;
+    border: 0.1rem solid #b85d1c;
+    outline: none;
+    cursor: pointer;
+}
+
+.btnArrow {
+    margin-left: 0.5rem;
+    transition: margin-left 0.4s
+}
+
+.readMoreBtn:hover .btnArrow {
+    margin-left: 1.5rem;
+}
+
+.readMoreCheckBox {
+    display: none;
+}
+
+.readMoreInfoBox {
+    display: none;
+    margin-top: 2rem;
+    /* border: 2px solid red; */
+    width: 50rem;
+    /* height: 50rem; */
+    height: 0rem;
+    overflow: auto;
+    background-color: lightgrey;
+    transition: height 3s;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border: groove;
+
+}
+
+.readMoreCheckBox:checked ~ .readMoreInfoBox {
+    display: block;
+    height: 50rem;
+    /* overflow: auto; */
+}
+
+.readMoreHeader {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-left: 3rem;
+    /* text-transform: uppercase; */
+    color: #b85d1c;
+    background-color: transparent;
+    letter-spacing: 0.2rem;
+    /* border: 0.1rem solid #b85d1c; */
+}
+
+.readMoreSmallHeader {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.9rem;
+    font-weight: 400;
+    margin-left: 3rem;
+    /* text-transform: uppercase; */
+    color: #b85d1c;
+}
+
+.readMoreParagraph {
+    font-size: 1.4rem;
+}
+
+
+
+
+
+/*end of projects*/
+
+/*common header*/
+.commonHeader {
+    padding: 5rem;
+    text-align: center;
+    color: #b85d1c
+}
+
+.commonHeading {
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+}
+
+.smallUnderline {
+    width: 9rem;
+    height: 0.1rem;
+    margin: 0 auto 1rem auto;
+    background-color: #b85d1e;
+}
+.bigUnderline {
+    width: 20rem;
+    height: 0.1rem;
+    margin: auto;
+    background-color: #b85d1e;
+}
+/*end of common header*/
+
+/*footer*/
+.footer {
+    margin-left: 8rem;
+
+}
+
+.mainPart {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1c1c1c;
+    padding: 4rem;
+}
+
+.footerHeading {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: goldenrod;
+    margin: 1rem 0 3rem 0;
+}
+
+.footerList {
+    list-style: none;
+    padding: 0;
+
+}
+
+.footerListItem {
+    margin-bottom: 2rem;
+
+}
+
+.footerListLink {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: #bbb;
+}
+
+.contact p {
+    font-size: 1.5rem;
+    color: #bbb;
+    margin-bottom: 4rem;
+}
+
+.footerForm {
+    display: flex;
+
+}
+
+.footerInput {
+    width: 25rem;
+    padding: 1rem;
+    font-family: 'Josefin Sans', 'sans-serif';
+    font-size:1.8rem;
+    color:#444;
+    outline: none;
+}
+
+.footerBtn {
+    padding: 1rem;
+    background-color: #b85d1c;
+    color: #ddd;
+    border: none;
+
+}
+
+.gallery {
+    max-width: 45rem;
+
+}
+
+.imageWrapper {
+    width: 12rem;
+    margin: 0.4rem;
+    overflow: hidden;
+    
+}
+
+.footerImage {
+    width: 100%;
+    height:100%;
+    transition: all 0.5s;
+    backface-visibility: hidden;
+}
+
+.galleryImages {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.footerImage:hover {
+    transform: scale(1.3);
+    opacity: 0.8;
+}
+
+.creatorPart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 0 4rem;
+}
+
+.copyrightText {
+    font-size: 1.3rem;
+    color: #aaa;
+}
+
+.bottomText {
+    font-size: 1.4rem;
+    color: #bbb;
+    margin: auto;
+    
+}
+
+.bottomText p {
+    text-align: center;
+}
+
+.bottomText i {
+    font-size: 2rem;
+    margin: 0.5rem;
+    color: tomato;
+}
+
+.bottomText span {
+    color: gold;
+}
+/*end of footer*/
+
+
+/*Best way to do breakpoints is use the browserinspect and 
+check different viewports size. Scale down and check for problems, fix accordingly*/
+
+@media(max-width: 1400px){
+ 
+
+    .mainPart {
+        flex-direction: column;
+    }
+
+    .footerList {
+        display: flex;
+    }
+
+    .footerListItem {
+        margin-right: 3rem;
+    }
+}
+
+@media(max-width: 900px) {
+    .banner {
+        text-align: center;
+    }
+
+    .bannerHeading {
+        font-size: 4.7rem;
+    }
+
+    .bannerParagraph {
+        font-size: 2.6rem;
+    }
+
+    .bannerButton {
+        width: 16rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width: 750px) {
+
+
+    .footerList {
+        display: block;
+    }
+
+    .creatorPart {
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+    .copyrightText {
+        order: 1;
+    }
+    .aboutMeContent {
+        width: 100%;
+        padding: 5rem;
+    }
+
+    .aboutMeParagraph {
+        font-size: 1.4rem;
+        width: 100%
+    }
+}
+
+@media(max-width: 670px) {
+    .readMoreInfoBox {
+        width: 100%
+    }
+}
+
+@media(max-width: 500px) {
+    .navigation {
+        width: 28rem;
+    }
+
+    .navigationSearchInput {
+        width:20rem;
+    }
+
+    .image {
+        width: 13rem;
+    }
+
+    .aboutMeHeading {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .subHeading {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .aboutMeContent {
+        padding: 5rem;
+    }
+
+    .portfolioHeading {
+        font-size: 2rem;
+    }
+
+    .bannerHeading {
+        font-size: 3rem;
+    }
+
+    .bannerParagraph {
+        font-size: 2rem;
+    }
+
+    .commonHeading {
+        font-size: 2rem;
+
+    }
+
+    .smallUnderLine {
+        width: 5rem;
+    }
+
+    .bigUnderLine {
+        width: 12rem;
+    }
+
+  
+
+  
+    .aboutMeContent {
+        width: 100%;
+    }
+
+    .aboutMeParagraph {
+        font-size: 1.4rem;
+        width: 100%
+    }
+
+    .mainPart {
+        padding: 2rem;
+    }
+
+    .footerInput {
+        width: 12rem;
+    }
+
+    .imageWrapper {
+        width: 9rem;
+    }
+
+    .readMoreHeader {
+        font-size: 2rem;
+    }
+}
