@@ -1,0 +1,359 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #01323D;
+}
+
+p, footer { 
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    padding: 20px;
+    color: #AF8200;
+}
+
+p,  {
+    
+    font-weight:bold;
+    font-size: 1.2em;
+}
+
+footer { 
+    
+    font-size: 0.9em;
+}
+
+
+
+
+
+
+.contentwrapper {
+    background-color: #03586C;
+    margin-top: 10px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+}
+
+header {
+    
+    text-align: center;
+    border-bottom:2px groove #AF8200
+    
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    color: #AF8200;
+    display: inline-block;
+    padding: 0.3em;
+    border: 2px dotted #AF8200;
+    text-shadow: 5px 5px 8px #01323D;
+    font-size: 53px;  /*Different font size for responsive settings */
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: 2px groove #AF8200
+    
+}
+
+nav a {
+    color: #AF8200;
+    padding: 14px 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;   
+    margin: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #01323D;
+    opacity: 0.8;
+}
+
+.imagecontainer {
+    position: relative;
+    max-width: 701px; /*Exact dimensions of both pictures*/
+    max-height: 526px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mainpicture {
+    display: block; 
+    max-width: 100%;  /*It will shrink for smaller screens but not go over its normal size on larger screens */
+    height: auto;
+    border-radius: 12px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+
+
+.overlaypicture {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: 0.4s;
+    border-radius: 12px;
+}
+
+.imagecontainer:hover .overlaypicture {
+    opacity: 1;
+}
+
+/*Modal code*/
+
+.modal { /*The div box that contains the span (X button), image and caption blocks  */
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /*Enables scroll if needed*/
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+
+}
+
+/* Modal content (image) */
+.modal-content {  /*This is an image element but with no src... the javascript chooses the images */
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 701px;
+
+}
+
+/*Caption of modal contnet*/
+
+#caption { /*THis is a div with no content set in html, javascript provides the content. */
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 701px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+
+}
+
+/*Add animation */
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s
+}
+
+@keyframes zoom {
+    from { transform: scale(0.10 )}
+    to { transform: scale(1)}
+}
+
+/*The close button */
+.close { /*This is a <span> element */
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+
+}
+
+.close:hover, 
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/*Contact page form */
+
+.formwrapper {
+    background-color: rgba(1,50,61,0.5);
+    position: relative;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px;
+}
+
+.formnotinuse { 
+    opacity: 0;
+    position:absolute;
+    top: 20px;
+    left:0;
+    right:0;
+    bottom:0;
+    transform: rotate(-20deg);
+}
+
+.formnotinuse h1 {
+    color: red;
+    text-decoration: underline;
+
+}
+
+.formwrapper:hover .formnotinuse{
+
+    opacity:1;
+
+}
+
+.col1 {
+    float: left;
+    width: 25%;
+}
+
+.col2 {
+    float: left;
+    width: 75%
+}
+
+/* Clear floats after the columns. Allows changing of heights in prev rows and ensures new row starts below */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+label {
+    display: inline-block;
+    padding: 10px;
+}
+
+input { 
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    float: right;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+}
+
+textarea {
+    height: 200px;
+}
+
+input, textarea {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+label {
+    color: #AF8200;
+    
+}
+
+.projectcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    
+    
+    align-items: top;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.projectbox {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    margin: 10px;
+    max-width: 250px;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    padding: 10px 10px 20px 10px;
+    border: 1px solid #BFBFBF;
+    border-radius: 2px;
+    align-self: center
+    
+}
+
+.transformright {
+    transform: rotate(7deg);
+}
+
+.transformleft {
+    transform: rotate(-7deg);
+}
+
+.projectbox img {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.projectbox a {
+   text-decoration: underline;
+   color: #AF8200;
+   font-weight: bold;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    nav {   
+      flex-direction: column;
+      text-align: center;
+      
+    }
+    nav a {
+        padding: 0;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 5vh;
+    }
+
+    .modal-content {
+        width: 100%;
+    }
+
+    .col1, .col2, input[type="submit"] {
+        width:100%;
+    }
+
+    .projectcontainer {
+        flex-direction: column;
+    }
+
+    .projectbox {
+        width: 100%;
+    }
+
+
+  }
+
+  
+
