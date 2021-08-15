@@ -569,7 +569,7 @@ body {
 }
 
 
-/* end of page setup*/
+
 
 
 .slideShowHeading {
@@ -599,19 +599,19 @@ body {
 .mainContainer {
     width: 130rem;
     height: 60rem;
-    /* border: 1px dotted goldenrod; */
     position: relative;
-    /* top: 15rem; */
-    margin: auto;
-    /* border-radius: -5rem; */
-    /* overflow: hidden; */
+    /* margin: auto; */
+    left: 50%;
+    transform: translateX(-50%);
 }
 .outerCurlyLine {
     width: 20rem;
     height: 5rem;
     border-bottom: 2px solid black;
     position: absolute;
-    left: 55rem;
+    /* left: 55rem; */
+    left: 50%;
+    transform: translateX(-50%);
     top: 0rem;  
     border-radius: 10rem;
 }
@@ -622,7 +622,8 @@ body {
     border-bottom: 2px solid black;
     position: absolute;
     top: 2rem;
-    left: 60rem;
+    left: 50%;
+    transform: translateX(-50%);
     border-radius: 10rem;
 }
 
@@ -631,7 +632,8 @@ body {
     height: 0rem;
     border-bottom: 2px solid black;
     position: absolute;
-    left: 50rem;
+    left: 50%;
+    transform: translateX(-50%);
     top: 5rem;
 }
 
@@ -639,8 +641,10 @@ body {
     height: 46rem;
     width: 120rem;
     position: absolute;
-    top: 7rem;
-    left: 5rem;
+    /* top: 7rem; */
+    top : 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     /* border: 2px double black; */
     border-style: double;
     overflow: hidden;
@@ -653,7 +657,8 @@ body {
     border-bottom: 2px solid black;
     position: absolute;
     top: 55rem;
-    left: 50rem;
+    left: 50%;
+    transform: translateX(-50%); 
 }
 
 .innerCurlyLine2 {
@@ -661,7 +666,8 @@ body {
     height: 3rem;
     border-top: 2px solid black;
     position: absolute;
-    left: 60rem;
+    left: 50%;
+    transform: translateX(-50%);
     top: 55rem;
     border-radius: 10rem;
 }
@@ -670,15 +676,17 @@ body {
     height: 5rem;
     border-top: 2px solid black;
     position: absolute;
-    left: 55rem;
+    left: 50%;
+    transform: translateX(-50%);
     top: 55rem;  
     border-radius: 10rem;
 }
 
 .imageContainer {
     position: absolute;
-    top: 8rem;
-    left: 130rem;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 100%
     
     /* animation-iteration-count:infinite; */  
 }
@@ -689,26 +697,32 @@ body {
 }
 @keyframes imageScroll {
     0% {
-        left: 130rem;
+        left: 100%
     }
 
     40% {
-        left: 36rem;
-        top: 8rem;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
     }
 
     50% {
-        left: 36rem;
-        top: 6rem;
+        left: 50%;
+        top:  45%;
+        transform: translate(-50%, -50%);
+
     }
 
     55% {
-        left: 36rem;
-        top: 8rem;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
     }
 
     100% {
-        left: -48rem;
+        left: -50%;
     }
 }
 .image {
@@ -933,62 +947,19 @@ check different viewports size. Scale down and check for problems, fix according
 @media(max-width: 1340px) {
     /* slideshow gets crushed :( */
     .mainContainer {
-        width: 70rem;
+        width: 95%;
     }
     .frame {
-        width: 65rem;
+        width: 95%;
         
     }
 
-    .outerCurlyLine {
-        left: 25rem;
-    }
+ 
 
-    .innerCurlyLine{
-        left: 30rem;
-    }
 
-    .innerSmallLine {
-        left: 20rem;
-    }
-    .outerCurlyLine2 {
-        left: 25rem;
-    }
-
-    .innerCurlyLine2 {
-        left: 30rem;
-    }
-
-    .innerSmallLine2 {
-        left: 20rem;
-    }
-
-    
-    @keyframes imageScroll {
-        0% {
-            left: 130rem;
-        }
-    
-        40% {
-            left: 8.5rem;
-            top: 8rem;
-        }
-    
-        50% {
-            left: 8.5rem;
-            top: 6rem;
-        }
-    
-        55% {
-            left: 8.5rem;
-            top: 8rem;
-        }
-    
-        100% {
-            left: -48rem;
-        }
-    }
 }
+
+
 
 @media(max-width: 900px) {
     .banner {
@@ -1008,72 +979,20 @@ check different viewports size. Scale down and check for problems, fix according
         font-size: 1.5rem;
     }
 
-    .mainContainer {
-        width: 49rem;
-    }
-    .frame {
-        width: 48rem;
-        
-    }
-
-    .outerCurlyLine {
-        left: 14rem;
-    }
-
-    .innerCurlyLine{
-        left: 19rem;
-    }
-
-    .innerSmallLine {
-        left: 9rem;
-    }
-    .outerCurlyLine2 {
-        left: 14rem;
-    }
-
-    .innerCurlyLine2 {
-        left: 19rem;
-    }
-
-    .innerSmallLine2 {
-        left: 9rem;
-    }
-
     .image {
-        width: 25rem;
-        height: 15.65rem;
+        width: 40rem;
+        height: 25rem;
     }
-    .imageContainer {
-        top: 15.5rem;
-    }
-    @keyframes imageScroll {
-        0% {
-            left: 130rem;
-        }
-    
-        40% {
-            left: 11.5rem;
-            top: 15.5rem;
-        }
-    
-        50% {
-            left: 11.5rem;
-            top: 13.5rem;
-        }
-    
-        55% {
-            left: 11.5rem;
-            top: 15.5rem;
-        }
-    
-        100% {
-            left: -48rem;
-        }
-    }
+
+
+   
 }
 
-@media(max-width: 750px) {
-
+@media(max-width: 780px) {
+    .image {
+         width: 30rem;
+         height: 18.75rem;
+        }
 
     .footerList {
         display: block;
@@ -1100,26 +1019,47 @@ check different viewports size. Scale down and check for problems, fix according
 }
 
 @media(max-width: 670px) {
-    .mainContainer {
-        display: none;
-    }
+   
     .readMoreInfoBox {
         width: 100%
     }
+    .mainContainer {
+        height: 40rem;
+    }
+    .frame {
+        height: 90%;
+    }
+
+    .innerCurlyLine, .outerCurlyLine, .innerSmallLine, .innerCurlyLine2, .outerCurlyLine2, .innerSmallLine2 {
+        display: none;
+    }
+
+    .image {
+        width: 25rem;
+        height: 15.6rem;
+       }
+    /* 46/40 frame mainContainer  */
 }
 
+@media(max-width: 600px) {
+    .image {
+        width: 20rem;
+        height: 12.5rem;
+       }
+}
 @media(max-width: 500px) {
     .navigation {
         width: 28rem;
     }
-
+   .image {
+       width: 15rem;
+       height: 9.385;
+   }
     .navigationSearchInput {
         width:20rem;
     }
 
-    .image {
-        width: 13rem;
-    }
+    
 
     .aboutMeHeading {
         font-size: 2.5rem;
@@ -1160,7 +1100,9 @@ check different viewports size. Scale down and check for problems, fix according
         width: 12rem;
     }
 
-  
+    .slideShowSection {
+        margin-left: 4rem;
+    }
 
   
     .aboutMeContent {
