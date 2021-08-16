@@ -596,66 +596,53 @@ body {
     margin: 5rem auto 5rem auto;
 
 } 
-
 .mainContainer {
-    /* width: 130rem;
-    height: 60rem; */
-    width: 100%;
-    /* height: 23rem; */
-    padding-top: 46%;
+    width: 130rem;
+    height: 60rem;
     position: relative;
-    top: 0rem;
-    margin: auto;
-    /* display: none; */
-    /* overflow: hidden; */
-}
-
-
-.outerCurlyLine {
-    width: 15.38%;
-    height: 8.33%;
-    border-bottom: 2px solid black;;
-    position: absolute;
+    /* margin: auto; */
     left: 50%;
     transform: translateX(-50%);
-    
-    /* top: 0rem;   */
-    bottom: 91.2%;
+}
+.outerCurlyLine {
+    width: 20rem;
+    height: 5rem;
+    border-bottom: 2px solid black;
+    position: absolute;
+    /* left: 55rem; */
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0rem;  
     border-radius: 10rem;
 }
 
 .innerCurlyLine {
-    width: 7.7%;
-    height: 5%;
+    width: 10rem;
+    height: 3rem;
     border-bottom: 2px solid black;
     position: absolute;
-    /* top: 2rem; */
+    top: 2rem;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 10rem;
-    bottom: 91.2%;
-
 }
 
 .innerSmallLine {
-    width: 23.08%;
+    width: 30rem;
     height: 0rem;
     border-bottom: 2px solid black;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    /* top: 5rem; */
-    bottom: 91.2%;
-
+    top: 5rem;
 }
 
 .frame {
-    height: 75%;
-    width: 92%;
+    height: 46rem;
+    width: 120rem;
     position: absolute;
     /* top: 7rem; */
-    top: 50%;
-    /* left: 5rem; */
+    top : 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     /* border: 2px double black; */
@@ -665,45 +652,41 @@ body {
 }
 
 .innerSmallLine2 {
-    width: 23.08%;
+    width: 30rem;
     height: 0rem;
     border-bottom: 2px solid black;
     position: absolute;
-    top: 91.66%;
+    top: 55rem;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); 
 }
 
 .innerCurlyLine2 {
-    width: 7.7%;
-    height: 5%;
+    width: 10rem;
+    height: 3rem;
     border-top: 2px solid black;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 91.66%;
+    top: 55rem;
     border-radius: 10rem;
 }
 .outerCurlyLine2 {
-    width: 15.38%;
-    height: 8.33%;
+    width: 20rem;
+    height: 5rem;
     border-top: 2px solid black;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 91.66%;
+    top: 55rem;  
     border-radius: 10rem;
 }
 
 .imageContainer {
     position: absolute;
-    width: 40%;
-    height: 66%;
-    overflow: hidden;
     top: 50%;
     transform: translateY(-50%);
-    left: 100%;
-    
+    left: 100%
     
     /* animation-iteration-count:infinite; */  
 }
@@ -711,15 +694,13 @@ body {
 .imageContainerAnimation {
     animation-name: imageScroll;
     animation-duration: 4s;
-    
 }
 @keyframes imageScroll {
     0% {
-        left: 100%;
+        left: 100%
     }
 
     40% {
-        
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
@@ -728,15 +709,16 @@ body {
 
     50% {
         left: 50%;
-        top: 45%;
+        top:  45%;
         transform: translate(-50%, -50%);
-        
+
     }
 
     55% {
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+
     }
 
     100% {
@@ -744,24 +726,15 @@ body {
     }
 }
 .image {
-    /* width: 48rem;
-    height: 30rem; */
-    height: 100%;
-    width: 100%;
-    /*needs to be 65% width*/
+    width: 48rem;
+    height: 30rem;
 }
 
-
-/* frame: height 45rem
-width: 119.6 */
 .topLeftCornerObstacle {
     position: absolute;
-    /* top: -50rem; */
-    top: -111.11%;
-    /* width: 20rem; */
-    width: 16.72%;
-    /* height: 100rem; */
-    height: 222.2%;
+    top: -50rem;
+    width: 20rem;
+    height: 100rem;
     /* background-color: red; */
     transform: rotate(65deg);
     z-index: 2;
@@ -770,10 +743,10 @@ width: 119.6 */
 
 .topRightCornerObstacle {
     position: absolute;
-    top: -111.11%;
+    top: -50rem;
     right: 0;
-    width: 16.72%;
-    height: 222.2%;
+    width: 20rem;
+    height: 100rem;
     background-color: red;
     transform: rotate(-65deg);
     z-index: 2;
@@ -783,11 +756,9 @@ width: 119.6 */
 
 .topSideObstacle {
     position: absolute;
-    top: -11.11%;
-    /* height: 5.5rem; */
-    height: 12.2%;
-    /* width: 120rem; */
-    width: 100%;
+    top: -5rem;
+    height: 5.5rem;
+    width: 120rem;
     background-color: red;
     z-index: 1.5;
     background-image: repeating-linear-gradient(red, maroon 5%)
@@ -795,21 +766,21 @@ width: 119.6 */
 
 .leftSideObstacle {
     position: absolute;
-    height: 102%;
-    width: 25.1%;
+    height: 46rem;
+    width: 30rem;
     background-color: red;
     z-index: 2;
-    left: -16.72%;
+    left: -20rem;
     background-image: repeating-linear-gradient(90deg,red, maroon 5%)
 
 }
 .rightSideObstacle {
     position: absolute;
-    height: 102%;
-    width: 25.1%;
+    height: 46rem;
+    width: 30rem;
     background-color: red;
     z-index: 2;
-    right: -16.72%;
+    right: -20rem;
     background-image: repeating-linear-gradient(90deg,red, maroon 5%)
 
 }
@@ -973,7 +944,20 @@ check different viewports size. Scale down and check for problems, fix according
     }
 }
 
+@media(max-width: 1340px) {
+    /* slideshow gets crushed :( */
+    .mainContainer {
+        width: 95%;
+    }
+    .frame {
+        width: 95%;
+        
+    }
 
+ 
+
+
+}
 
 
 
@@ -995,14 +979,21 @@ check different viewports size. Scale down and check for problems, fix according
         font-size: 1.5rem;
     }
 
- 
+    .image {
+        width: 40rem;
+        height: 25rem;
+    }
 
 
    
 }
 
 @media(max-width: 780px) {
-   
+    .image {
+         width: 30rem;
+         height: 18.75rem;
+        }
+
     .footerList {
         display: block;
     }
@@ -1032,17 +1023,38 @@ check different viewports size. Scale down and check for problems, fix according
     .readMoreInfoBox {
         width: 100%
     }
- 
-    
-  
+    .mainContainer {
+        height: 40rem;
+    }
+    .frame {
+        height: 90%;
+    }
+
+    .innerCurlyLine, .outerCurlyLine, .innerSmallLine, .innerCurlyLine2, .outerCurlyLine2, .innerSmallLine2 {
+        display: none;
+    }
+
+    .image {
+        width: 25rem;
+        height: 15.6rem;
+       }
+    /* 46/40 frame mainContainer  */
 }
 
-
+@media(max-width: 600px) {
+    .image {
+        width: 20rem;
+        height: 12.5rem;
+       }
+}
 @media(max-width: 500px) {
     .navigation {
         width: 28rem;
     }
- 
+   .image {
+       width: 15rem;
+       height: 9.385;
+   }
     .navigationSearchInput {
         width:20rem;
     }

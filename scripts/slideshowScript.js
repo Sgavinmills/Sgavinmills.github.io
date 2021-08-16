@@ -13,7 +13,6 @@ frame.addEventListener('click',() => {
         imageLink.setAttribute('href', imageSelection[photoNumber][1]);
         showRunning = true;
     }
-   
 })
 
 imageContainer.addEventListener("animationend", () => {
