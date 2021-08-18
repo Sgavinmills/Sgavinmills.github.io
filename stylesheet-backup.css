@@ -1,5 +1,5 @@
 html {
-  font-size: 62.5%; /*Makes default font-size 10px (rather than 16) */
+  font-size: 62.5%;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
@@ -34,7 +34,7 @@ body {
 }
 
 .line {
-    height: 0.2rem; /* 2 pixels" */
+    height: 0.2rem; 
     width: 2.5rem;
     background-color: #222;
     margin-bottom: 0.6rem;
@@ -95,9 +95,7 @@ body {
 }
 
 
-.menu-icon:hover .navigation {
-    display: flex;
-}
+
 .navigationHeading {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 3.5rem;
@@ -107,11 +105,10 @@ body {
     text-align: center;
 }
 
-.navigationSearch {
-    /*So can position the button relative to the form*/
+/* .navigationSearch {
     position: relative;
-}
-
+} */
+/* 
 .navigationSearchInput {
     width: 30rem;
     padding: 1rem 2rem;
@@ -146,11 +143,11 @@ body {
 
 .navigationSearchBtn:focus {
     outline: none;
-}
+} */
 
 .navigationList {
     list-style: none;
-    padding: 0px;
+    padding: 0px;   
     height: 10rem;
     display: flex;
     flex-direction: column;
@@ -290,7 +287,7 @@ body {
     animation: anim 1.5s 0.5s backwards;
 
 }
-
+/* 
 .bannerButton {
     width: 21rem;
     padding: 1.2rem 2rem;
@@ -304,24 +301,24 @@ body {
     cursor: pointer;
     animation: anim 1s 1s backwards;
 
-}
+} */
 
-.bannerButton:hover {
+/* .bannerButton:hover {
     background: linear-gradient(to left, gold, goldenrod);
 }
 
 .bannerButton:active {
     transform: translateY(0.2rem)
-}
+} */
 
-@keyframes anim {
+/* @keyframes anim {
     0% {
         opacity: 0;
     }
     100% {
         opacity: 1;
     }
-}
+} */
 /*End of header*/
 
 /* About me */
@@ -372,85 +369,6 @@ body {
     text-align: center;
     margin-bottom: 5rem;
 
-}
-
-
-
-
-
-
-/* .checkbox:checked ~ .navigation{
-    left: 8rem;
-}
-
-
-
-/*end of about me */
-
-
-/* projects */
-.projectsContainer {
-    margin-left: 8rem;
-}
-
-.projectsHeader {
-    
-    text-align: center;
-}
-
-
-.projectImagesContainer {
-    margin: 5rem 0 10rem 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    
-}
-
-.projectImageWrapper {
-    overflow: hidden;
-    box-shadow: 3rem 6rem 6rem rgba(0,0,0,0.3);
-    box-shadow: 10px 10px 5px #aaaaaa;
-    margin: 2rem;
-    max-width: 20rem;
-}
-
-.innerImageWrapper {
-    max-width: 19rem;
-    max-height: 19rem;
-    max-width: 100%;
-    overflow: hidden;
-}
-
-.transformRight {
-    transform: rotate(0deg);
-    -webkit-transform: rotate(7deg);
-}
-
-.transformLeft {
-    transform: rotate(-7deg);
-}
-
-.projectBlurb {
-    padding: 0.5rem;
-    font-size: 1.5rem;
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Josefin Sans', sans-serif;
-
-
-}
-
-.projectImage {
-    width: 100%;
-    height: 100%;
-    transition: all 1s;
-    box-shadow: 0 3rem 6rem rgba(0,0,0,0.3)
-}
-
-.projectImage:hover {
-    transform: scale(1.3);
-    opacity: 0.8;
 }
 
 
@@ -528,6 +446,88 @@ body {
 
 
 
+/* .checkbox:checked ~ .navigation{
+    left: 8rem;
+}
+
+
+
+/*end of about me */
+
+
+/* projects */
+.projectsContainer {
+    margin-left: 8rem;
+}
+
+.projectsHeader {
+    
+    text-align: center;
+}
+
+
+.projectImagesContainer {
+    margin: 5rem 0 10rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.projectImageWrapper {
+    overflow: hidden;
+    box-shadow: 3rem 6rem 6rem rgba(0,0,0,0.3);
+    box-shadow: 10px 10px 5px #aaaaaa;
+    margin: 2rem;
+    max-width: 20rem;
+}
+
+.innerImageWrapper {
+    max-width: 19rem;
+    max-height: 19rem;
+    height: 19rem;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.transformRight {
+    transform: rotate(7deg);
+    -webkit-transform: rotate(7deg);
+}
+
+.transformLeft {
+    transform: rotate(-7deg);
+    -webkit-transform: rotate(-7deg);
+
+}
+
+.projectBlurb {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+
+
+}
+
+.projectImage {
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+    box-shadow: 0 3rem 6rem rgba(0,0,0,0.3)
+}
+
+.projectImage:hover {
+    transform: scale(1.3);
+    opacity: 0.8;
+}
+
+
+
+
+
+
 
 
 /*end of projects*/
@@ -596,53 +596,66 @@ body {
     margin: 5rem auto 5rem auto;
 
 } 
+
 .mainContainer {
-    width: 130rem;
-    height: 60rem;
+    /* width: 130rem;
+    height: 60rem; */
+    width: 100%;
+    /* height: 23rem; */
+    padding-top: 46%;
     position: relative;
-    /* margin: auto; */
-    left: 50%;
-    transform: translateX(-50%);
+    top: 0rem;
+    margin: auto;
+    /* display: none; */
+    /* overflow: hidden; */
 }
+
+
 .outerCurlyLine {
-    width: 20rem;
-    height: 5rem;
-    border-bottom: 2px solid black;
+    width: 15.38%;
+    height: 8.33%;
+    border-bottom: 2px solid black;;
     position: absolute;
-    /* left: 55rem; */
     left: 50%;
     transform: translateX(-50%);
-    top: 0rem;  
+    
+    /* top: 0rem;   */
+    bottom: 91.2%;
     border-radius: 10rem;
 }
 
 .innerCurlyLine {
-    width: 10rem;
-    height: 3rem;
+    width: 7.7%;
+    height: 5%;
     border-bottom: 2px solid black;
     position: absolute;
-    top: 2rem;
+    /* top: 2rem; */
     left: 50%;
     transform: translateX(-50%);
     border-radius: 10rem;
+    bottom: 91.2%;
+
 }
 
 .innerSmallLine {
-    width: 30rem;
+    width: 23.08%;
     height: 0rem;
     border-bottom: 2px solid black;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 5rem;
+    /* top: 5rem; */
+    bottom: 91.2%;
+
 }
 
 .frame {
-    height: 46rem;
-    width: 120rem;
+    height: 75%;
+    width: 92%;
     position: absolute;
     /* top: 7rem; */
-    top : 50%;
+    top: 50%;
+    /* left: 5rem; */
     left: 50%;
     transform: translate(-50%, -50%);
     /* border: 2px double black; */
@@ -652,41 +665,45 @@ body {
 }
 
 .innerSmallLine2 {
-    width: 30rem;
+    width: 23.08%;
     height: 0rem;
     border-bottom: 2px solid black;
     position: absolute;
-    top: 55rem;
+    top: 91.66%;
     left: 50%;
-    transform: translateX(-50%); 
+    transform: translateX(-50%);
 }
 
 .innerCurlyLine2 {
-    width: 10rem;
-    height: 3rem;
+    width: 7.7%;
+    height: 5%;
     border-top: 2px solid black;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 55rem;
+    top: 91.66%;
     border-radius: 10rem;
 }
 .outerCurlyLine2 {
-    width: 20rem;
-    height: 5rem;
+    width: 15.38%;
+    height: 8.33%;
     border-top: 2px solid black;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 55rem;  
+    top: 91.66%;
     border-radius: 10rem;
 }
 
 .imageContainer {
     position: absolute;
+    width: 40%;
+    height: 66%;
+    overflow: hidden;
     top: 50%;
     transform: translateY(-50%);
-    left: 100%
+    left: 100%;
+    
     
     /* animation-iteration-count:infinite; */  
 }
@@ -694,13 +711,15 @@ body {
 .imageContainerAnimation {
     animation-name: imageScroll;
     animation-duration: 4s;
+    
 }
 @keyframes imageScroll {
     0% {
-        left: 100%
+        left: 100%;
     }
 
     40% {
+        
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
@@ -709,16 +728,15 @@ body {
 
     50% {
         left: 50%;
-        top:  45%;
+        top: 45%;
         transform: translate(-50%, -50%);
-
+        
     }
 
     55% {
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-
     }
 
     100% {
@@ -726,15 +744,24 @@ body {
     }
 }
 .image {
-    width: 48rem;
-    height: 30rem;
+    /* width: 48rem;
+    height: 30rem; */
+    height: 100%;
+    width: 100%;
+    /*needs to be 65% width*/
 }
 
+
+/* frame: height 45rem
+width: 119.6 */
 .topLeftCornerObstacle {
     position: absolute;
-    top: -50rem;
-    width: 20rem;
-    height: 100rem;
+    /* top: -50rem; */
+    top: -111.11%;
+    /* width: 20rem; */
+    width: 16.72%;
+    /* height: 100rem; */
+    height: 222.2%;
     /* background-color: red; */
     transform: rotate(65deg);
     z-index: 2;
@@ -743,10 +770,10 @@ body {
 
 .topRightCornerObstacle {
     position: absolute;
-    top: -50rem;
+    top: -111.11%;
     right: 0;
-    width: 20rem;
-    height: 100rem;
+    width: 16.72%;
+    height: 222.2%;
     background-color: red;
     transform: rotate(-65deg);
     z-index: 2;
@@ -756,9 +783,11 @@ body {
 
 .topSideObstacle {
     position: absolute;
-    top: -5rem;
-    height: 5.5rem;
-    width: 120rem;
+    top: -11.11%;
+    /* height: 5.5rem; */
+    height: 12.2%;
+    /* width: 120rem; */
+    width: 100%;
     background-color: red;
     z-index: 1.5;
     background-image: repeating-linear-gradient(red, maroon 5%)
@@ -766,21 +795,21 @@ body {
 
 .leftSideObstacle {
     position: absolute;
-    height: 46rem;
-    width: 30rem;
+    height: 102%;
+    width: 25.1%;
     background-color: red;
     z-index: 2;
-    left: -20rem;
+    left: -16.72%;
     background-image: repeating-linear-gradient(90deg,red, maroon 5%)
 
 }
 .rightSideObstacle {
     position: absolute;
-    height: 46rem;
-    width: 30rem;
+    height: 102%;
+    width: 25.1%;
     background-color: red;
     z-index: 2;
-    right: -20rem;
+    right: -16.72%;
     background-image: repeating-linear-gradient(90deg,red, maroon 5%)
 
 }
@@ -944,20 +973,7 @@ check different viewports size. Scale down and check for problems, fix according
     }
 }
 
-@media(max-width: 1340px) {
-    /* slideshow gets crushed :( */
-    .mainContainer {
-        width: 95%;
-    }
-    .frame {
-        width: 95%;
-        
-    }
 
- 
-
-
-}
 
 
 
@@ -979,21 +995,14 @@ check different viewports size. Scale down and check for problems, fix according
         font-size: 1.5rem;
     }
 
-    .image {
-        width: 40rem;
-        height: 25rem;
-    }
+ 
 
 
    
 }
 
 @media(max-width: 780px) {
-    .image {
-         width: 30rem;
-         height: 18.75rem;
-        }
-
+   
     .footerList {
         display: block;
     }
@@ -1023,38 +1032,17 @@ check different viewports size. Scale down and check for problems, fix according
     .readMoreInfoBox {
         width: 100%
     }
-    .mainContainer {
-        height: 40rem;
-    }
-    .frame {
-        height: 90%;
-    }
-
-    .innerCurlyLine, .outerCurlyLine, .innerSmallLine, .innerCurlyLine2, .outerCurlyLine2, .innerSmallLine2 {
-        display: none;
-    }
-
-    .image {
-        width: 25rem;
-        height: 15.6rem;
-       }
-    /* 46/40 frame mainContainer  */
+ 
+    
+  
 }
 
-@media(max-width: 600px) {
-    .image {
-        width: 20rem;
-        height: 12.5rem;
-       }
-}
+
 @media(max-width: 500px) {
     .navigation {
         width: 28rem;
     }
-   .image {
-       width: 15rem;
-       height: 9.385;
-   }
+ 
     .navigationSearchInput {
         width:20rem;
     }
