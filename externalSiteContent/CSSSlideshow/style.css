@@ -1,0 +1,205 @@
+/*page setup*/
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    background-color: #ddd
+}
+
+.mainContainer {
+    width: 100%;
+    padding-top: 46%;
+    border: 1px dotted goldenrod;
+    position: relative;
+    top: 0rem;
+    margin: auto;
+}
+
+/* end of page setup*/
+
+/* outer frame decoration*/
+
+.outerCurlyLine {
+    width: 15.38%;
+    height: 8.33%;
+    border-bottom: 2px solid black;;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 91.2%;
+    border-radius: 10rem;
+}
+
+.innerCurlyLine {
+    width: 7.7%;
+    height: 5%;
+    border-bottom: 2px solid black;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10rem;
+    bottom: 91.2%;
+}
+
+.innerSmallLine {
+    width: 23.08%;
+    height: 0rem;
+    border-bottom: 2px solid black;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 91.2%;
+}
+
+.frame {
+    height: 75%;
+    width: 92%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-style: double;
+    overflow: hidden;
+    background-color: white;
+}
+
+.innerSmallLine2 {
+    width: 23.08%;
+    height: 0rem;
+    border-bottom: 2px solid black;
+    position: absolute;
+    top: 91.66%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.innerCurlyLine2 {
+    width: 7.7%;
+    height: 5%;
+    border-top: 2px solid black;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 91.66%;
+    border-radius: 10rem;
+}
+.outerCurlyLine2 {
+    width: 15.38%;
+    height: 8.33%;
+    border-top: 2px solid black;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 91.66%;
+    border-radius: 10rem;
+}
+
+/*end of outer frame decoration*/
+
+/*image and container*/
+
+.imageContainer {
+    position: absolute;
+    width: 40%;
+    height: 66%;
+    overflow: hidden;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 100%;
+}
+
+.imageContainerAnimation {
+    animation-name: imageScroll;
+    animation-duration: 4s;
+    
+}
+
+@keyframes imageScroll {
+    0% {
+        left: 100%;
+    }
+    40% {
+        
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    50% {
+        left: 50%;
+        top: 45%;
+        transform: translate(-50%, -50%);
+    }
+    55% {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        left: -50%;
+    }
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+}
+
+/*end of image set up*/
+
+/*inner frame decoration*/
+
+.topLeftCornerObstacle {
+    position: absolute;
+    top: -111.11%;
+    width: 16.72%;
+    height: 222.2%;
+    transform: rotate(65deg);
+    z-index: 2;
+    background-image: repeating-linear-gradient(red, maroon 5%)
+}
+
+.topRightCornerObstacle {
+    position: absolute;
+    top: -111.11%;
+    right: 0;
+    width: 16.72%;
+    height: 222.2%;
+    background-color: red;
+    transform: rotate(-65deg);
+    z-index: 2;
+    background-image: repeating-linear-gradient(red, maroon 5%)
+
+}
+.topSideObstacle {
+    position: absolute;
+    top: -11.11%;
+    height: 12.2%;
+    width: 100%;
+    background-color: red;
+    z-index: 1.5;
+    background-image: repeating-linear-gradient(red, maroon 5%)
+}
+
+.leftSideObstacle {
+    position: absolute;
+    height: 102%;
+    width: 25.1%;
+    background-color: red;
+    z-index: 2;
+    left: -16.72%;
+    background-image: repeating-linear-gradient(90deg,red, maroon 5%)
+
+}
+.rightSideObstacle {
+    position: absolute;
+    height: 102%;
+    width: 25.1%;
+    background-color: red;
+    z-index: 2;
+    right: -16.72%;
+    background-image: repeating-linear-gradient(90deg,red, maroon 5%)
+
+}
