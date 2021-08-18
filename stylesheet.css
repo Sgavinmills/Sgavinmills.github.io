@@ -1,5 +1,5 @@
 html {
-  font-size: 62.5%; /*Makes default font-size 10px (rather than 16) */
+  font-size: 62.5%;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
@@ -34,7 +34,7 @@ body {
 }
 
 .line {
-    height: 0.2rem; /* 2 pixels" */
+    height: 0.2rem; 
     width: 2.5rem;
     background-color: #222;
     margin-bottom: 0.6rem;
@@ -95,9 +95,9 @@ body {
 }
 
 
-.menu-icon:hover .navigation {
+/* .menu-icon:hover .navigation {
     display: flex;
-}
+} */
 .navigationHeading {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 3.5rem;
@@ -107,11 +107,10 @@ body {
     text-align: center;
 }
 
-.navigationSearch {
-    /*So can position the button relative to the form*/
+/* .navigationSearch {
     position: relative;
-}
-
+} */
+/* 
 .navigationSearchInput {
     width: 30rem;
     padding: 1rem 2rem;
@@ -146,11 +145,11 @@ body {
 
 .navigationSearchBtn:focus {
     outline: none;
-}
+} */
 
 .navigationList {
     list-style: none;
-    padding: 0px;
+    padding: 0px;   
     height: 10rem;
     display: flex;
     flex-direction: column;
@@ -290,7 +289,7 @@ body {
     animation: anim 1.5s 0.5s backwards;
 
 }
-
+/* 
 .bannerButton {
     width: 21rem;
     padding: 1.2rem 2rem;
@@ -304,24 +303,24 @@ body {
     cursor: pointer;
     animation: anim 1s 1s backwards;
 
-}
+} */
 
-.bannerButton:hover {
+/* .bannerButton:hover {
     background: linear-gradient(to left, gold, goldenrod);
 }
 
 .bannerButton:active {
     transform: translateY(0.2rem)
-}
+} */
 
-@keyframes anim {
+/* @keyframes anim {
     0% {
         opacity: 0;
     }
     100% {
         opacity: 1;
     }
-}
+} */
 /*End of header*/
 
 /* About me */
@@ -372,85 +371,6 @@ body {
     text-align: center;
     margin-bottom: 5rem;
 
-}
-
-
-
-
-
-
-/* .checkbox:checked ~ .navigation{
-    left: 8rem;
-}
-
-
-
-/*end of about me */
-
-
-/* projects */
-.projectsContainer {
-    margin-left: 8rem;
-}
-
-.projectsHeader {
-    
-    text-align: center;
-}
-
-
-.projectImagesContainer {
-    margin: 5rem 0 10rem 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    
-}
-
-.projectImageWrapper {
-    overflow: hidden;
-    box-shadow: 3rem 6rem 6rem rgba(0,0,0,0.3);
-    box-shadow: 10px 10px 5px #aaaaaa;
-    margin: 2rem;
-    max-width: 20rem;
-}
-
-.innerImageWrapper {
-    max-width: 19rem;
-    max-height: 19rem;
-    max-width: 100%;
-    overflow: hidden;
-}
-
-.transformRight {
-    transform: rotate(0deg);
-    -webkit-transform: rotate(7deg);
-}
-
-.transformLeft {
-    transform: rotate(-7deg);
-}
-
-.projectBlurb {
-    padding: 0.5rem;
-    font-size: 1.5rem;
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Josefin Sans', sans-serif;
-
-
-}
-
-.projectImage {
-    width: 100%;
-    height: 100%;
-    transition: all 1s;
-    box-shadow: 0 3rem 6rem rgba(0,0,0,0.3)
-}
-
-.projectImage:hover {
-    transform: scale(1.3);
-    opacity: 0.8;
 }
 
 
@@ -525,6 +445,87 @@ body {
 .readMoreParagraph {
     font-size: 1.4rem;
 }
+
+
+
+/* .checkbox:checked ~ .navigation{
+    left: 8rem;
+}
+
+
+
+/*end of about me */
+
+
+/* projects */
+.projectsContainer {
+    margin-left: 8rem;
+}
+
+.projectsHeader {
+    
+    text-align: center;
+}
+
+
+.projectImagesContainer {
+    margin: 5rem 0 10rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.projectImageWrapper {
+    overflow: hidden;
+    box-shadow: 3rem 6rem 6rem rgba(0,0,0,0.3);
+    box-shadow: 10px 10px 5px #aaaaaa;
+    margin: 2rem;
+    max-width: 20rem;
+}
+
+.innerImageWrapper {
+    max-width: 19rem;
+    max-height: 19rem;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.transformRight {
+    transform: rotate(7deg);
+    -webkit-transform: rotate(7deg);
+}
+
+.transformLeft {
+    transform: rotate(-7deg);
+    -webkit-transform: rotate(-7deg);
+
+}
+
+.projectBlurb {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+
+
+}
+
+.projectImage {
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+    box-shadow: 0 3rem 6rem rgba(0,0,0,0.3)
+}
+
+.projectImage:hover {
+    transform: scale(1.3);
+    opacity: 0.8;
+}
+
+
+
 
 
 

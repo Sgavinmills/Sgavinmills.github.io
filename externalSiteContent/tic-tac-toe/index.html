@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="gameContainer">
+
+        <div class="gridContainer">
+
+            <table class="grid">
+                <tr>
+                    <td class="square topRow leftColumn" id="topLeft"></td>
+                    <td class="square topRow middleColumn" id="topMiddle"></td>
+                    <td class="square topRow rightColumn" id="topRight"></td>
+                </tr>
+                <tr>
+                    <td class="square middleRow leftColumn" id="middleLeft"></td>
+                    <td class="square middleRow middleColumn" id="middleMiddle"></td>
+                    <td class="square middleRow rightColumn" id="middleRight"></td>
+                </tr>
+                <tr>
+                    <td class="square bottomRow leftColumn" id="bottomLeft"></td>
+                    <td class="square bottomRow middleColumn" id="bottomMiddle"></td>
+                    <td class="square bottomRow rightColumn" id="bottomRight"></td>
+                </tr>
+            </table>
+
+
+
+        </div>
+    </div>
+    <div class="infoContainer">
+        <div class="player1InfoContainer">
+            <div class="player1Info">
+                <p class="playerInfoParagraph">Player 1: <span id="player1Score">0</span></p>
+                   <p class="playingAsParagraph"> Currently playing as: <span
+                        id="player1shape">crosses</span></p>
+                </h2>
+            </div>
+        </div>
+        <div class="player2InfoContainer">
+            <div class="player2Info">
+                <p class="playerInfoParagraph">Player 2: <span id="player2Score">0</span> </p>
+               <p class="playingAsParagraph">  Currently playing as:   <span
+                        id="player2shape">noughts</span></p>
+                </h2>
+            </div>
+        </div>"
+    </div>
+    <div class="buttonContainer">
+        <button id="resetBtn">Reset</button>
+    </div>
+</body>
+
+</html>
